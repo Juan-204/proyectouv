@@ -9,28 +9,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
@@ -43,4 +21,113 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* App.css */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4caf50, #1e88e5);
+  transition: background 0.5s ease; /* Transición suave para el fondo */
+}
+
+body:hover {
+  background: linear-gradient(135deg, #1e88e5, #4caf50); /* Cambiar el gradiente al pasar el mouse */
+}
+
+.shadow-2xl {
+  width: 200%; /* Ajuste de ancho para hacer el formulario más amplio */
+  max-width: none; /* No establecer un max-width para permitir el 200% */
+  padding: 20px;
+  margin: 0; /* Eliminar el margin */
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transform: translateX(-50%); /* Centrar el formulario */
+  left: 50%; /* Mover el elemento al 50% del contenedor */
+  position: relative; /* Necesario para el transform */
+  transition: all 0.3s ease-in-out;
+  opacity: 0.95;
+}
+
+.shadow-2xl:hover {
+  transform: translateX(-50%) scale(1.03); /* Centrar y escalar al mismo tiempo */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.text-4xl {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e88e5;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.MuiFormControl-root {
+  width: 100%;
+}
+
+.MuiButton-root {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.MuiButton-root:hover {
+  background-color: #4caf50;
+}
+
+.MuiFormControl-root .MuiInputLabel-root,
+.MuiTextField-root label,
+.MuiFormControl-root .MuiInputBase-root,
+.MuiTextField-root .MuiInputBase-root {
+  transition: all 0.3s;
+}
+
+.MuiTextField-root label.Mui-focused,
+.MuiFormControl-root label.Mui-focused,
+.MuiTextField-root .MuiInputBase-root:hover fieldset,
+.MuiFormControl-root .MuiInputBase-root:hover fieldset {
+  color: #1e88e5;
+  border-color: #1e88e5;
+}
+
+/* Ajuste de color de los inputs y etiquetas */
+input,
+select,
+label {
+  font-weight: 400;
+  color: #555;
+}
+
+/* Agrega un efecto de foco */
+input:focus,
+select:focus {
+  outline: 2px solid #4caf50;
+  border-color: #1e88e5;
+}
+
+/* Ajustes específicos para formularios */
+form {
+  padding: 1.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4caf50;
+  color: white;
 }
