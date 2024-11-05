@@ -33,7 +33,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #4caf50, #1e88e5);
-  transition: background 0.5s ease; /* Transición suave para el fondo */
+  transition: background 1.5s ease-in-out; /* Transición suave para el fondo */
 }
 
 body:hover {
@@ -41,8 +41,8 @@ body:hover {
 }
 
 .shadow-2xl {
-  width: 200%; /* Ajuste de ancho para hacer el formulario más amplio */
-  max-width: none; /* No establecer un max-width para permitir el 200% */
+  /*width: 100%; /* Ajuste de ancho para hacer el formulario más amplio */
+  /*max-width: none; /* No establecer un max-width para permitir el 200% */
   padding: 20px;
   margin: 0; /* Eliminar el margin */
   background-color: white;
@@ -53,10 +53,23 @@ body:hover {
   position: relative; /* Necesario para el transform */
   transition: all 0.3s ease-in-out;
   opacity: 0.95;
+  align-items: center;
+  padding: 1rem;
+  text-align: left;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+
 .shadow-2xl:hover {
-  transform: translateX(-50%) scale(1.03); /* Centrar y escalar al mismo tiempo */
+  transform: translateX(-50%) scale(1.0019); /* Centrar y escalar al mismo tiempo */
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
   opacity: 1;
 }
@@ -118,6 +131,7 @@ form {
 }
 
 button {
+  width: 10rem;
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
