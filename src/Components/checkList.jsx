@@ -18,6 +18,14 @@ function BuscarUsuario() {
         setUsuarioEncontrado(usuario || null);
     };
 
+    const handleCedulaChange = (e) => {
+        const value = e.target.value;
+        // Verifica que el valor ingresado sea numérico
+        if (/^\d*$/.test(value)) {
+            setCedulaBusqueda(value);
+        }
+    };
+
     return (
         <Box component="form" className="shadow-2xl">
             <Typography className="text-4xl">Buscar Usuario por Cédula</Typography>
@@ -25,7 +33,7 @@ function BuscarUsuario() {
             <TextField
                 label="Número de Cédula"
                 value={cedulaBusqueda}
-                onChange={(e) => setCedulaBusqueda(e.target.value)}
+                onChange={handleCedulaChange}
                 required
                 className="MuiFormControl-root"
                 sx={{ marginBottom: 2 }} // Espacio adicional entre el label y el botón
